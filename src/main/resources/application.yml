@@ -1,0 +1,13 @@
+server.port: 8081
+
+logging.level.com.ufranco.springfeignexample.restClient: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
+      article-client:
+        url: http://localhost:8080/
